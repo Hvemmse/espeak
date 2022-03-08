@@ -1,0 +1,13 @@
+# Rtl = ReadTextLoud
+
+# coded 08-03-2022 By Frank Simens
+# Contact: frank@simens.dk
+
+echo "Indsæt sidens link brug (CTRL+SHIFT+v): "
+read url
+
+lynx $url -dump -nolist >> /tmp/text
+
+espeak-ng -s 125 -v da -f /tmp/text
+
+
